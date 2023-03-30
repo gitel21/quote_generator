@@ -1,7 +1,7 @@
 const quoteContainer = document.getElementById('quote-container');
 const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
-const TwitterBtn = document.getElementById('twitter');
+const twitterBtn = document.getElementById('twitter');
 const newQuoteBtn = document.getElementById('new-quote');
 const timeText = document.getElementById('time');
 const loader = document.getElementById('loader');
@@ -21,7 +21,7 @@ const complete = () => {
 // Get Quote
 const newQuote = () => {
     loading();
-    // Pick a random quote from apiQuotes array
+    // Pick a random quote from a quote array
     const quote = localQuotes[Math.floor(Math.random() * localQuotes.length)];
     // Check if Author field is black and replace it with "Unknown"
     if (!quote.author) {
@@ -52,7 +52,7 @@ const getTime = () => {
 
 // Event Listeners
 newQuoteBtn.addEventListener('click', newQuote);
-TwitterBtn.addEventListener('click', tweetQuote);
+twitterBtn.addEventListener('click', tweetQuote);
 
 getTime();
 newQuote();
